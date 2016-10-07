@@ -67,7 +67,7 @@ gs_enet = ms.GridSearchCV(
         'alpha': [0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000],
         'l1_ratio': [0.0, 0.1, 0.5, 0.7, 0.9, 0.95, 0.99, 1.0]
     },
-    scoring=mape,
+    scoring=mae,
     cv=kf
 )
 gs_enet.fit(X, y)
